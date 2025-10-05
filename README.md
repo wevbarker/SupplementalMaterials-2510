@@ -1,3 +1,5 @@
+![General Solution Transform](GeneralSolution.gif)
+
 # Supplemental Materials for arXiv:2510.XXXXX
 
 **Higher spin Lagrangians from higher derivative diffeomorphisms**
