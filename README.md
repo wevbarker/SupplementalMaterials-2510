@@ -1,11 +1,175 @@
-# Supplemental Materials to arXiv:2510.XXXXX
+# Supplemental Materials for arXiv:2510.XXXXX
 
-Will Barker, Dario Francia, Carlo Marzo and Alessandro Santoni
+**Higher spin Lagrangians from higher derivative diffeomorphisms**
 
-## About
+Will Barker¹, Dario Francia², Carlo Marzo³, Alessandro Santoni⁴⁵
 
-Supplemental materials for this paper will be uploaded here soon.
+¹ Central European Institute for Cosmology and Fundamental Physics, Institute of Physics of the Czech Academy of Sciences, Prague, Czechia
+² Roma Tre University and INFN Sezione di Roma Tre, Roma, Italy
+³ Laboratory for High Energy and Computational Physics, NICPB, Tallinn, Estonia
+⁴ Institut für Theoretische Physik, Technische Universität Wien, Vienna, Austria
+⁵ Facultad de Física, Pontificia Universidad Católica de Chile, Santiago, Chile
 
-## Coming Soon
+---
 
-This repository will contain computational materials supporting the results presented in our paper on higher spin Lagrangians from higher derivative diffeomorphisms.
+## Overview
+
+This repository contains computational materials supporting the analytical results presented in our paper on higher spin Lagrangians from higher derivative diffeomorphisms. We demonstrate that Fronsdal's action for massless particles of arbitrary spin is uniquely identified by the weaker requirement of invariance under gauge transformations driven by a vector parameter, rather than the standard rank-(s-1) tensor parameter.
+
+The supplemental materials include:
+- Symbolic calculations solving the constraint equations for gauge invariance
+- Numerical analysis of the solution space across spin and dimension
+- Visualization of singular value spectra illustrating failure modes of scalar reduction
+
+## Contents
+
+### Source Code
+
+- **`GeneralSolution.m`** - Mathematica script implementing symbolic solution of gauge invariance constraints using xAct tensor manipulation
+- **`GeneralSolution.nb`** - Mathematica notebook with interactive calculations and explanations
+- **`GeneralSolution.py`** - Python implementation for high-performance numerical analysis and visualization
+
+### Data Files
+
+- **`GeneralSolutionCoefficients.csv`** - Coefficient functions for the general solution as functions of spin s and dimension D
+- **`GeneralSolutionRanks.csv`** - Rank of constraint system for each (s,D) point
+- **`GeneralSolutionEquations.csv`** - Explicit form of constraint equations
+
+### Output Files
+
+- **`GeneralSolution.pdf`** - Rendered output from Mathematica notebook showing symbolic derivations
+- **`Dariograph.pdf`** - Heatmap visualization of singular value spectra showing failure of scalar reduction
+- **`GeneralSolutionTransform.gif`** - Animated visualization of the continuous analytic extension in spin and dimension
+
+## Requirements
+
+### Mathematica
+
+- Mathematica 12.0 or later
+- xAct package (specifically xPlain for self-documenting calculations)
+- Installation: `<<xAct\`xPlain\``
+
+### Python
+
+```
+numpy>=1.20
+matplotlib>=3.5
+sympy>=1.10 (optional, for symbolic limit calculations)
+```
+
+The Python script is optimized for parallel execution using multiprocessing and includes automatic BLAS threading configuration to avoid oversubscription.
+
+## Usage
+
+### Mathematica Workflow
+
+```mathematica
+(* Load the script *)
+Get["GeneralSolution.m"]
+
+(* Or open the interactive notebook *)
+NotebookOpen["GeneralSolution.nb"]
+```
+
+The Mathematica implementation:
+1. Defines symbolic operators and constraint equations
+2. Solves for coefficients λ₀, λ₁, ..., λ₅ ensuring gauge invariance
+3. Verifies the Fronsdal solution and identifies alternative solutions
+4. Exports results to CSV for numerical analysis
+
+### Python Workflow
+
+```bash
+# Generate the Dariograph figure
+python GeneralSolution.py
+```
+
+The Python script:
+1. Reads coefficient functions from CSV files
+2. Computes singular value decomposition across (s,D) grid
+3. Performs analytic continuation for smooth visualization
+4. Generates publication-quality heatmap with circled annotations
+5. Exports figure to both local directory and manuscript directory
+
+**Note**: The script uses multiprocessing for parallel computation. On systems with many cores, computation typically completes in under 2 minutes.
+
+## Key Results
+
+The computations demonstrate:
+
+1. **Vector reduction uniqueness**: Requiring gauge invariance under vector parameter transformations uniquely selects the Fronsdal solution for all s ≥ 1 and D ≥ 2.
+
+2. **Scalar reduction failure**: Scalar parameter reduction fails to uniquely determine the Fronsdal solution for s ≥ 2, leaving N(s,D) free parameters where:
+   - N(2,D) = 1 (one free parameter)
+   - N(3,D) = 2 (two free parameters)
+   - N(s≥4,D) = 1 (one free parameter)
+
+3. **Anomalous dimensions**: Special failure modes occur at D=1 for s=3,4,5 where singular values vanish, leading to enhanced non-uniqueness.
+
+4. **Singular value structure**: The constraint system exhibits at most three non-zero singular values (σ₁, σ₂, σ₃) with σ₂ emerging at s≥2 and σ₃ at s≥4.
+
+## Data Format
+
+### GeneralSolutionCoefficients.csv
+
+```
+s,D,lambda0,lambda1,lambda2,lambda3,lambda4,lambda5
+2,3,1.0,-1.0,1.0,-0.5,0.5,-0.5
+...
+```
+
+### GeneralSolutionRanks.csv
+
+```
+s,D,rank,N
+2,3,4,1
+...
+```
+
+Where `rank` is the rank of the constraint matrix M(s,D) and `N` is the number of free parameters beyond Fronsdal.
+
+## FAIR Principles Compliance
+
+This repository adheres to FAIR (Findable, Accessible, Interoperable, Reusable) principles:
+
+- **Findable**: Linked from arXiv paper, persistent DOI via Zenodo (upon publication)
+- **Accessible**: Open access via GitHub with permissive license
+- **Interoperable**: Standard formats (CSV, PDF), cross-platform code (Mathematica, Python)
+- **Reusable**: Comprehensive documentation, clear licensing, version controlled
+
+## License
+
+This work is licensed under the MIT License. You are free to use, modify, and distribute these materials with attribution.
+
+## Citation
+
+If you use these materials, please cite:
+
+```bibtex
+@article{BarkerFrancia2025,
+  author = {Barker, Will and Francia, Dario and Marzo, Carlo and Santoni, Alessandro},
+  title = {Higher spin Lagrangians from higher derivative diffeomorphisms},
+  journal = {arXiv preprint arXiv:2510.XXXXX},
+  year = {2025}
+}
+```
+
+## Contact
+
+For questions or issues with these materials, please contact:
+- Will Barker: barker@fzu.cz
+- Dario Francia: dario.francia@uniroma3.it
+
+## Acknowledgments
+
+This work used computational resources from:
+- DiRAC Data Intensive service (CSD3) at the University of Cambridge
+- Newton compute server provisioned by Will Handley via ERC grant
+
+W.B. acknowledges support from Girton College Cambridge, Marie Skłodowska-Curie Actions (MSCA), and the Institute of Physics of the Czech Academy of Sciences. C.M. was supported by Estonian Research Council grant PRG1677. A.S. acknowledges ANID CONICYT-PFCHA/DoctoradoNacional/2020-21201387.
+
+Co-funded by the European Union (Physics for Future – Grant Agreement No. 101081515).
+
+---
+
+*Last updated: October 2025*

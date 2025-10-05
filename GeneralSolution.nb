@@ -1,0 +1,2285 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     75102,       2277]
+NotebookOptionsPosition[     65432,       2133]
+NotebookOutlinePosition[     69166,       2202]
+CellTagsIndexPosition[     69087,       2197]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{3.968608853925095*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"4eb8c06d-f824-4ff9-874f-5aa14fe0e774"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Package xAct`xPerm`  version \"\>", 
+   "\[InvisibleSpace]", "\<\"1.2.3\"\>", "\[InvisibleSpace]", "\<\", \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2015", ",", "8", ",", "23"}], "}"}]}],
+  SequenceForm["Package xAct`xPerm`  version ", "1.2.3", ", ", {2015, 8, 23}],
+  
+  Editable->False]], "Print",
+ CellChangeTimes->{3.968608853926141*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"2963bba1-a494-45e9-b395-7c5a48f1079b"],
+
+Cell[BoxData["\<\"CopyRight (C) 2003-2020, Jose M. Martin-Garcia, under the \
+General Public License.\"\>"], "Print",
+ CellChangeTimes->{3.968608853926956*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"41fdaaaa-8943-4af8-a496-c93d7d794873"],
+
+Cell[BoxData["\<\"Connecting to external linux executable...\"\>"], "Print",
+ CellChangeTimes->{3.968608853988944*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"b164a52b-0d64-43b9-a88f-f523b28d5f03"],
+
+Cell[BoxData["\<\"Connection established.\"\>"], "Print",
+ CellChangeTimes->{3.9686088540415688`*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"d30ecedd-0b13-4525-9998-71631f045f88"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{3.968608854042914*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"794d2b5d-0f5d-4fd0-b1bf-9140e2d9688f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Package xAct`xTensor`  version \"\>", 
+   "\[InvisibleSpace]", "\<\"1.2.0\"\>", "\[InvisibleSpace]", "\<\", \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2021", ",", "10", ",", "17"}], "}"}]}],
+  SequenceForm[
+  "Package xAct`xTensor`  version ", "1.2.0", ", ", {2021, 10, 17}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.968608854043808*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"f618fecb-50a6-4ad1-bdc7-c6a55bc03689"],
+
+Cell[BoxData["\<\"CopyRight (C) 2002-2021, Jose M. Martin-Garcia, under the \
+General Public License.\"\>"], "Print",
+ CellChangeTimes->{3.968608854044527*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"35c2044f-d8c4-486c-a870-54704cd61ced"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{3.968608854141383*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"89df2a7a-331f-4028-8a83-6d882d24a2b6"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Package xAct`xPlain` version \"\>", 
+   "\[InvisibleSpace]", "\<\"0.0.0-developer\"\>", 
+   "\[InvisibleSpace]", "\<\", \"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"2025", ",", "8", ",", "24"}], "}"}]}],
+  SequenceForm[
+  "Package xAct`xPlain` version ", "0.0.0-developer", ", ", {2025, 8, 24}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.968608854142755*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"a0246d1f-ffcf-4ed6-aa77-7871e61f0721"],
+
+Cell[BoxData["\<\"CopyRight \[Copyright] 2023, Will Barker and Sebastian \
+Zell, under the General Public License.\"\>"], "Print",
+ CellChangeTimes->{3.968608854143566*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"ae2f20fd-97c6-4bc3-9181-d97f6bf86d74"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{3.968608854149693*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"4c654135-3ad1-4a9f-a2a7-51bce397fc2e"],
+
+Cell[BoxData["\<\"These packages come with ABSOLUTELY NO WARRANTY; for \
+details type Disclaimer[]. This is free software, and you are welcome to \
+redistribute it under certain conditions. See the General Public License for \
+details.\"\>"], "Print",
+ CellChangeTimes->{3.968608854150215*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"85091c1f-fd65-4e76-948e-8a48e6e52738"],
+
+Cell[BoxData["\<\"------------------------------------------------------------\
+\"\>"], "Print",
+ CellChangeTimes->{3.968608854150757*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"53654200-3d8f-482d-95bd-8a32f54f2e86"]
+}, Open  ]],
+
+Cell["General solution", "Text",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608854443592*^9},
+ FontSize->80,
+ FontVariations->{"Underline"->True},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"a55d051a-1c5a-40bc-a19f-\
+35066b778105"],
+
+Cell["Original Francia-type basis", "Text",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608854455106*^9},
+ FontSize->35,
+ FontVariations->{"Underline"->True},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"1e86ac4f-434d-4a8b-a324-\
+53a8fcdb9e5f"],
+
+Cell["We first consider the basis.", "Text",
+ CellContext->"Global`",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.96860885446456*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"c36522e9-2924-43aa-95db-\
+2fabc92ab545"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[Lambda]", "0"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Lambda0,
+    Editable->False], " ", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalO]", "0"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Operator0,
+    Editable->False]}], "+", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[Lambda]", "1"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Lambda1,
+    Editable->False], " ", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalO]", "1"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Operator1,
+    Editable->False]}], "+", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[Lambda]", "2"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Lambda2,
+    Editable->False], " ", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalO]", "2"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Operator2,
+    Editable->False]}], "+", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[Lambda]", "3"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Lambda3,
+    Editable->False], " ", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalO]", "3"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Operator3,
+    Editable->False]}], "+", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[Lambda]", "4"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Lambda4,
+    Editable->False], " ", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalO]", "4"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Operator4,
+    Editable->False]}], "+", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[Lambda]", "5"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Lambda5,
+    Editable->False], " ", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalO]", "5"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Operator5,
+    Editable->False]}]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.96860885447606*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"44a3f3ab-2b50-455e-97f1-a63b796e1f11"],
+
+Cell["Here is the general solution.", "Text",
+ CellContext->"Global`",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608854487368*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"20e764cf-6c81-4d21-92d6-\
+a3c21706527c"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "2"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda2,
+   Editable->False], "\[Rule]", 
+  RowBox[{"-", 
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\[Lambda]", "0"],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`Lambda0,
+       Editable->False], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "6"}], "+", 
+        InterpretationBox[
+         StyleBox["\[ScriptCapitalD]",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Dim,
+         Editable->False], "+", 
+        RowBox[{"2", " ", 
+         InterpretationBox[
+          StyleBox["\[ScriptS]",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`Spin,
+          Editable->False]}]}], ")"}]}], "+", 
+     RowBox[{
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\[Lambda]", "1"],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`Lambda1,
+       Editable->False], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "2"}], "+", 
+        RowBox[{
+         InterpretationBox[
+          StyleBox["\[ScriptS]",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`Spin,
+          Editable->False], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "3"}], "+", 
+           InterpretationBox[
+            StyleBox["\[ScriptCapitalD]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Dim,
+            Editable->False], "+", 
+           InterpretationBox[
+            StyleBox["\[ScriptS]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Spin,
+            Editable->False]}], ")"}]}]}], ")"}]}]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       InterpretationBox[
+        StyleBox["\[ScriptS]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Spin,
+        Editable->False]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "4"}], "+", 
+       InterpretationBox[
+        StyleBox["\[ScriptCapitalD]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Dim,
+        Editable->False], "+", 
+       InterpretationBox[
+        StyleBox["\[ScriptS]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Spin,
+        Editable->False]}], ")"}]}]]}]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608854880991*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"4a125f17-3b32-452d-8520-773cf0d476e0"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "3"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda3,
+   Editable->False], "\[Rule]", 
+  RowBox[{"-", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[Lambda]", "5"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Lambda5,
+    Editable->False]}]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608854891363*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"0f1a1c82-1917-42da-be83-0a49c68161eb"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "4"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda4,
+   Editable->False], "\[Rule]", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"2", " ", 
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[Lambda]", "0"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Lambda0,
+      Editable->False]}], "+", 
+    RowBox[{"2", " ", 
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[Lambda]", "1"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Lambda1,
+      Editable->False]}], "-", 
+    RowBox[{
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[Lambda]", "5"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Lambda5,
+      Editable->False], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       InterpretationBox[
+        StyleBox["\[ScriptS]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Spin,
+        Editable->False]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "4"}], "+", 
+       InterpretationBox[
+        StyleBox["\[ScriptCapitalD]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Dim,
+        Editable->False], "+", 
+       InterpretationBox[
+        StyleBox["\[ScriptS]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Spin,
+        Editable->False]}], ")"}]}]}], 
+   RowBox[{"2", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      InterpretationBox[
+       StyleBox["\[ScriptS]",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`Spin,
+       Editable->False]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "4"}], "+", 
+      InterpretationBox[
+       StyleBox["\[ScriptCapitalD]",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`Dim,
+       Editable->False], "+", 
+      InterpretationBox[
+       StyleBox["\[ScriptS]",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`Spin,
+       Editable->False]}], ")"}]}]]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608854899433*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"b711e177-7891-4dfb-bbab-cc719cc92eef"],
+
+Cell["\<\
+Here is the case of \"s=1\". Note that there are fewer operators than six in \
+the case of \"s=1\" and \"s=2\".\
+\>", "Text",
+ CellContext->"Global`",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.9686088599345703`*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"6b437c72-5cdd-4917-8a66-\
+59a25f99cfff"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "1"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda1,
+   Editable->False], "\[Rule]", 
+  RowBox[{"-", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[Lambda]", "0"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Lambda0,
+    Editable->False]}]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.9686088599495087`*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"9ef975d7-9802-426e-80e9-9b1306260fb6"],
+
+Cell["The specific case of \"s=3\".", "Text",
+ CellContext->"Global`",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608859956366*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"4af82153-606c-4f8c-9b1a-\
+cb964d73a391"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "2"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda2,
+   Editable->False], "\[Rule]", 
+  FractionBox[
+   RowBox[{
+    RowBox[{
+     InterpretationBox[
+      StyleBox["\[ScriptCapitalD]",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Dim,
+      Editable->False], " ", 
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[Lambda]", "0"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Lambda0,
+      Editable->False]}], "-", 
+    RowBox[{"2", " ", 
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[Lambda]", "1"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Lambda1,
+      Editable->False]}], "+", 
+    RowBox[{"3", " ", 
+     InterpretationBox[
+      StyleBox["\[ScriptCapitalD]",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Dim,
+      Editable->False], " ", 
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[Lambda]", "1"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Lambda1,
+      Editable->False]}]}], 
+   RowBox[{"2", "-", 
+    RowBox[{"2", " ", 
+     InterpretationBox[
+      StyleBox["\[ScriptCapitalD]",
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Dim,
+      Editable->False]}]}]]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608859996709*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"b8563b6f-a48c-4f1f-a25d-4b109a0cd4ba"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "5"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda5,
+   Editable->False], "\[Rule]", 
+  FractionBox[
+   RowBox[{
+    InterpretationBox[
+     StyleBox[
+      SubscriptBox["\[Lambda]", "0"],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`Lambda0,
+     Editable->False], "+", 
+    InterpretationBox[
+     StyleBox[
+      SubscriptBox["\[Lambda]", "1"],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`Lambda1,
+     Editable->False], "-", 
+    RowBox[{"2", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       InterpretationBox[
+        StyleBox["\[ScriptCapitalD]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Dim,
+        Editable->False]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       InterpretationBox[
+        StyleBox[
+         SubscriptBox["\[Lambda]", "3"],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Lambda3,
+        Editable->False], "+", 
+       InterpretationBox[
+        StyleBox[
+         SubscriptBox["\[Lambda]", "4"],
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Lambda4,
+        Editable->False]}], ")"}]}]}], 
+   RowBox[{"3", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      InterpretationBox[
+       StyleBox["\[ScriptCapitalD]",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`Dim,
+       Editable->False]}], ")"}]}]]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.9686088600036716`*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"2cb589d9-8d2f-4214-a492-36fd7eb542e2"],
+
+Cell["Alternative Fronsdal-type basis", "Text",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860009111*^9},
+ FontSize->35,
+ FontVariations->{"Underline"->True},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"54625805-0a00-41b6-b6e6-\
+c91fb2cf059c"],
+
+Cell["\<\
+Here we define a basis, where the Fronsdal combination and the trace of \
+Fronsdal have their own coefficients. This makes it manifest that these \
+coefficients completely disappear from the system which you provided.\
+\>", "Text",
+ CellContext->"Global`",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860016192*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"c7d54064-1996-441a-9f2d-\
+f29969dc64e5"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "0"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda0,
+   Editable->False], "\[Rule]", 
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[ScriptCapitalF]", "1"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`cF,
+   Editable->False]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.9686088600231133`*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"9a40c2c4-7f2c-42aa-ae8c-ba202630d96b"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "1"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda1,
+   Editable->False], "\[Rule]", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptC]", "1"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`c1,
+    Editable->False], "-", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalF]", "1"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`cF,
+    Editable->False]}]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.9686088600304947`*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"fb05f8c3-df00-43e3-8da2-791219c85db2"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "2"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda2,
+   Editable->False], "\[Rule]", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptC]", "2"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`c2,
+    Editable->False], "+", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalF]", "1"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`cF,
+    Editable->False]}]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860035942*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"759b38a2-6a5e-409e-ac76-b1857368844c"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "3"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda3,
+   Editable->False], "\[Rule]", 
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[ScriptCapitalF]", "2"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`cFp,
+   Editable->False]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860041678*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"cbb9e76e-cda9-48a0-83a8-ba9fc0dbf2f9"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "4"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda4,
+   Editable->False], "\[Rule]", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", " ", 
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\[ScriptC]", "4"],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`c4,
+       Editable->False]}], "+", 
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[ScriptCapitalF]", "2"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`cFp,
+      Editable->False]}], ")"}]}]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860048877*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"b3d8fea5-debe-4854-b70b-296d685db9b7"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[Lambda]", "5"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`Lambda5,
+   Editable->False], "\[Rule]", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptC]", "5"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`c5,
+    Editable->False], "-", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalF]", "2"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`cFp,
+    Editable->False]}]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.9686088600548277`*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"d3a912f9-7b28-4606-9199-8e81bd4025a0"],
+
+Cell["Here is the transformation of the operator sum.", "Text",
+ CellContext->"Global`",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860060014*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"86ecc28c-727f-4a4e-a5b0-\
+580a56024b3b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptC]", "1"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`c1,
+    Editable->False], " ", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalO]", "1"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Operator1,
+    Editable->False]}], "+", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptC]", "2"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`c2,
+    Editable->False], " ", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalO]", "2"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Operator2,
+    Editable->False]}], "+", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalF]", "1"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`cF,
+    Editable->False], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[ScriptCapitalO]", "0"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Operator0,
+      Editable->False], "-", 
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[ScriptCapitalO]", "1"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Operator1,
+      Editable->False], "+", 
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[ScriptCapitalO]", "2"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Operator2,
+      Editable->False]}], ")"}]}], "+", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptC]", "4"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`c4,
+    Editable->False], " ", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalO]", "4"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Operator4,
+    Editable->False]}], "+", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalF]", "2"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`cFp,
+    Editable->False], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[ScriptCapitalO]", "3"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Operator3,
+      Editable->False], "+", 
+     FractionBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\[ScriptCapitalO]", "4"],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`Operator4,
+       Editable->False], "2"], "-", 
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[ScriptCapitalO]", "5"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`Operator5,
+      Editable->False]}], ")"}]}], "+", 
+  RowBox[{
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptC]", "5"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`c5,
+    Editable->False], " ", 
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptCapitalO]", "5"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`Operator5,
+    Editable->False]}]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860065978*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"729319a7-9b3a-42e9-af40-1cbdb0fcadff"],
+
+Cell["\<\
+Here is the general solution. Notice how the Fronsdal-type coefficients \
+completely disappear.\
+\>", "Text",
+ CellContext->"Global`",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860071576*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"9520055a-38c4-4d12-ad5e-\
+e76ac57ca9cc"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[ScriptC]", "2"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`c2,
+   Editable->False], "\[Rule]", 
+  RowBox[{"-", 
+   FractionBox[
+    RowBox[{
+     InterpretationBox[
+      StyleBox[
+       SubscriptBox["\[ScriptC]", "1"],
+       ShowAutoStyles->False,
+       AutoSpacing->False],
+      $CellContext`c1,
+      Editable->False], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "2"}], "+", 
+       RowBox[{
+        InterpretationBox[
+         StyleBox["\[ScriptS]",
+          ShowAutoStyles->False,
+          AutoSpacing->False],
+         $CellContext`Spin,
+         Editable->False], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "3"}], "+", 
+          InterpretationBox[
+           StyleBox["\[ScriptCapitalD]",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`Dim,
+           Editable->False], "+", 
+          InterpretationBox[
+           StyleBox["\[ScriptS]",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`Spin,
+           Editable->False]}], ")"}]}]}], ")"}]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       InterpretationBox[
+        StyleBox["\[ScriptS]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Spin,
+        Editable->False]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "4"}], "+", 
+       InterpretationBox[
+        StyleBox["\[ScriptCapitalD]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Dim,
+        Editable->False], "+", 
+       InterpretationBox[
+        StyleBox["\[ScriptS]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Spin,
+        Editable->False]}], ")"}]}]]}]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860434719*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"5c7b86dc-e359-4fb3-9f08-72d3fc5e5f8a"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[ScriptC]", "4"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`c4,
+   Editable->False], "\[Rule]", 
+  FractionBox[
+   InterpretationBox[
+    StyleBox[
+     SubscriptBox["\[ScriptC]", "1"],
+     ShowAutoStyles->False,
+     AutoSpacing->False],
+    $CellContext`c1,
+    Editable->False], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      InterpretationBox[
+       StyleBox["\[ScriptS]",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`Spin,
+       Editable->False]}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "4"}], "+", 
+      InterpretationBox[
+       StyleBox["\[ScriptCapitalD]",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`Dim,
+       Editable->False], "+", 
+      InterpretationBox[
+       StyleBox["\[ScriptS]",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`Spin,
+       Editable->False]}], ")"}]}]]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860442874*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"30960505-f22f-4053-b267-47d689050b72"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[ScriptC]", "5"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`c5,
+   Editable->False], "\[Rule]", "0"}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.9686088604457197`*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"07e1b8f6-a075-4c3a-8667-0645ade8bb90"],
+
+Cell["\<\
+Here is the case of \"s=1\". Note that there are fewer operators than six in \
+the case of \"s=1\" and \"s=2\".\
+\>", "Text",
+ CellContext->"Global`",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860452958*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"43fa7391-7049-425d-938d-\
+5ccd68aa2566"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[ScriptC]", "1"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`c1,
+   Editable->False], "\[Rule]", "0"}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860459403*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"74b74309-18d3-457b-8457-9bade0b21a0a"],
+
+Cell["The specific case of \"s=3\".", "Text",
+ CellContext->"Global`",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860465049*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"bb154ef3-cc7b-49ea-a844-\
+21c6e5857ae0"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[ScriptC]", "2"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`c2,
+   Editable->False], "\[Rule]", 
+  FractionBox[
+   RowBox[{
+    InterpretationBox[
+     StyleBox[
+      SubscriptBox["\[ScriptC]", "1"],
+      ShowAutoStyles->False,
+      AutoSpacing->False],
+     $CellContext`c1,
+     Editable->False], " ", 
+    RowBox[{"(", 
+     RowBox[{"2", "-", 
+      RowBox[{"3", " ", 
+       InterpretationBox[
+        StyleBox["\[ScriptCapitalD]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Dim,
+        Editable->False]}]}], ")"}]}], 
+   RowBox[{"2", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      InterpretationBox[
+       StyleBox["\[ScriptCapitalD]",
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`Dim,
+       Editable->False]}], ")"}]}]]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.96860886048108*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"0b649df8-d24a-45f8-b626-83f6b80e884c"],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   StyleBox[
+    SubscriptBox["\[ScriptC]", "5"],
+    ShowAutoStyles->False,
+    AutoSpacing->False],
+   $CellContext`c5,
+   Editable->False], "\[Rule]", 
+  RowBox[{
+   FractionBox["1", "3"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "2"}], " ", 
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\[ScriptC]", "4"],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`c4,
+       Editable->False]}], "+", 
+     FractionBox[
+      InterpretationBox[
+       StyleBox[
+        SubscriptBox["\[ScriptC]", "1"],
+        ShowAutoStyles->False,
+        AutoSpacing->False],
+       $CellContext`c1,
+       Editable->False], 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       InterpretationBox[
+        StyleBox["\[ScriptCapitalD]",
+         ShowAutoStyles->False,
+         AutoSpacing->False],
+        $CellContext`Dim,
+        Editable->False]}]]}], ")"}]}]}]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860487681*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"ad2078e1-2294-4e40-8f98-e3d2a1716a44"],
+
+Cell["System coefficients", "Text",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608860493216*^9},
+ FontSize->35,
+ FontVariations->{"Underline"->True},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"5517fb69-9f5c-4b78-9f19-\
+b626f6ea5d15"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", 
+   TagBox[GridBox[{
+      {
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["2", 
+          RowBox[{"-", 
+           InterpretationBox[
+            StyleBox["\[ScriptN]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`NInd,
+            Editable->False]}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "2"}], " ", 
+            InterpretationBox[
+             StyleBox["\[ScriptN]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`NInd,
+             Editable->False]}], "+", 
+           InterpretationBox[
+            StyleBox["\[ScriptS]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Spin,
+            Editable->False]}], ")"}]}], 
+        RowBox[{
+         InterpretationBox[
+          StyleBox["Pochhammer",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          Pochhammer,
+          Editable->False], "[", 
+         RowBox[{
+          RowBox[{"3", "-", 
+           FractionBox[
+            InterpretationBox[
+             StyleBox["\[ScriptCapitalD]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Dim,
+             Editable->False], "2"], "-", 
+           InterpretationBox[
+            StyleBox["\[ScriptS]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Spin,
+            Editable->False]}], ",", 
+          InterpretationBox[
+           StyleBox["\[ScriptN]",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`NInd,
+           Editable->False]}], "]"}]]},
+      {
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["2", 
+          RowBox[{
+           RowBox[{"-", "1"}], "-", 
+           InterpretationBox[
+            StyleBox["\[ScriptN]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`NInd,
+            Editable->False]}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "2"}], " ", 
+            InterpretationBox[
+             StyleBox["\[ScriptN]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`NInd,
+             Editable->False]}], "+", 
+           InterpretationBox[
+            StyleBox["\[ScriptS]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Spin,
+            Editable->False]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"2", "+", 
+           RowBox[{"2", " ", 
+            InterpretationBox[
+             StyleBox["\[ScriptN]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`NInd,
+             Editable->False], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "3"}], "+", 
+              InterpretationBox[
+               StyleBox["\[ScriptCapitalD]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`Dim,
+               Editable->False], "+", 
+              InterpretationBox[
+               StyleBox["\[ScriptS]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`Spin,
+               Editable->False]}], ")"}]}], "-", 
+           RowBox[{
+            InterpretationBox[
+             StyleBox["\[ScriptS]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Spin,
+             Editable->False], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "3"}], "+", 
+              InterpretationBox[
+               StyleBox["\[ScriptCapitalD]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`Dim,
+               Editable->False], "+", 
+              InterpretationBox[
+               StyleBox["\[ScriptS]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`Spin,
+               Editable->False]}], ")"}]}]}], ")"}], " ", 
+         RowBox[{
+          InterpretationBox[
+           StyleBox["Gamma",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           Gamma,
+           Editable->False], "[", 
+          RowBox[{"3", "-", 
+           FractionBox[
+            InterpretationBox[
+             StyleBox["\[ScriptCapitalD]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Dim,
+             Editable->False], "2"], "-", 
+           InterpretationBox[
+            StyleBox["\[ScriptS]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Spin,
+            Editable->False]}], "]"}]}], 
+        RowBox[{
+         InterpretationBox[
+          StyleBox["Gamma",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          Gamma,
+          Editable->False], "[", 
+         RowBox[{"4", "-", 
+          FractionBox[
+           InterpretationBox[
+            StyleBox["\[ScriptCapitalD]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Dim,
+            Editable->False], "2"], "+", 
+          InterpretationBox[
+           StyleBox["\[ScriptN]",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`NInd,
+           Editable->False], "-", 
+          InterpretationBox[
+           StyleBox["\[ScriptS]",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`Spin,
+           Editable->False]}], "]"}]]},
+      {
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["2", 
+           RowBox[{
+            RowBox[{"-", "1"}], "-", 
+            InterpretationBox[
+             StyleBox["\[ScriptN]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`NInd,
+             Editable->False]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", 
+             InterpretationBox[
+              StyleBox["\[ScriptN]",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`NInd,
+              Editable->False]}], "-", 
+            InterpretationBox[
+             StyleBox["\[ScriptS]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Spin,
+             Editable->False]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            RowBox[{"2", " ", 
+             InterpretationBox[
+              StyleBox["\[ScriptN]",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`NInd,
+              Editable->False]}], "-", 
+            InterpretationBox[
+             StyleBox["\[ScriptS]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Spin,
+             Editable->False]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "4"}], "+", 
+            InterpretationBox[
+             StyleBox["\[ScriptCapitalD]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Dim,
+             Editable->False], "+", 
+            InterpretationBox[
+             StyleBox["\[ScriptS]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Spin,
+             Editable->False]}], ")"}], " ", 
+          RowBox[{
+           InterpretationBox[
+            StyleBox["Gamma",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            Gamma,
+            Editable->False], "[", 
+           RowBox[{"3", "-", 
+            FractionBox[
+             InterpretationBox[
+              StyleBox["\[ScriptCapitalD]",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Dim,
+              Editable->False], "2"], "-", 
+            InterpretationBox[
+             StyleBox["\[ScriptS]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Spin,
+             Editable->False]}], "]"}]}], 
+         RowBox[{
+          InterpretationBox[
+           StyleBox["Gamma",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           Gamma,
+           Editable->False], "[", 
+          RowBox[{"4", "-", 
+           FractionBox[
+            InterpretationBox[
+             StyleBox["\[ScriptCapitalD]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Dim,
+             Editable->False], "2"], "+", 
+           InterpretationBox[
+            StyleBox["\[ScriptN]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`NInd,
+            Editable->False], "-", 
+           InterpretationBox[
+            StyleBox["\[ScriptS]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Spin,
+            Editable->False]}], "]"}]]}]},
+      {
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["2", 
+           RowBox[{"1", "-", 
+            InterpretationBox[
+             StyleBox["\[ScriptN]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`NInd,
+             Editable->False]}]], " ", 
+          InterpretationBox[
+           StyleBox["\[ScriptN]",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`NInd,
+           Editable->False], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "4"}], "+", 
+            InterpretationBox[
+             StyleBox["\[ScriptCapitalD]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Dim,
+             Editable->False], "+", 
+            InterpretationBox[
+             StyleBox["\[ScriptS]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Spin,
+             Editable->False]}], ")"}], " ", 
+          RowBox[{
+           InterpretationBox[
+            StyleBox["Gamma",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            Gamma,
+            Editable->False], "[", 
+           RowBox[{"3", "-", 
+            FractionBox[
+             InterpretationBox[
+              StyleBox["\[ScriptCapitalD]",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Dim,
+              Editable->False], "2"], "-", 
+            InterpretationBox[
+             StyleBox["\[ScriptS]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Spin,
+             Editable->False]}], "]"}]}], 
+         RowBox[{
+          InterpretationBox[
+           StyleBox["Gamma",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           Gamma,
+           Editable->False], "[", 
+          RowBox[{"3", "-", 
+           FractionBox[
+            InterpretationBox[
+             StyleBox["\[ScriptCapitalD]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Dim,
+             Editable->False], "2"], "+", 
+           InterpretationBox[
+            StyleBox["\[ScriptN]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`NInd,
+            Editable->False], "-", 
+           InterpretationBox[
+            StyleBox["\[ScriptS]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Spin,
+            Editable->False]}], "]"}]]}]},
+      {
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["2", 
+           RowBox[{"-", 
+            InterpretationBox[
+             StyleBox["\[ScriptN]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`NInd,
+             Editable->False]}]], " ", 
+          InterpretationBox[
+           StyleBox["\[ScriptN]",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`NInd,
+           Editable->False], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", 
+             InterpretationBox[
+              StyleBox["\[ScriptN]",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`NInd,
+              Editable->False]}], "-", 
+            InterpretationBox[
+             StyleBox["\[ScriptS]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Spin,
+             Editable->False]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "5"}], "+", 
+            InterpretationBox[
+             StyleBox["\[ScriptCapitalD]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Dim,
+             Editable->False], "+", 
+            InterpretationBox[
+             StyleBox["\[ScriptS]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Spin,
+             Editable->False]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "4"}], "+", 
+            InterpretationBox[
+             StyleBox["\[ScriptCapitalD]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Dim,
+             Editable->False], "+", 
+            InterpretationBox[
+             StyleBox["\[ScriptS]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Spin,
+             Editable->False]}], ")"}], " ", 
+          RowBox[{
+           InterpretationBox[
+            StyleBox["Gamma",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            Gamma,
+            Editable->False], "[", 
+           RowBox[{"3", "-", 
+            FractionBox[
+             InterpretationBox[
+              StyleBox["\[ScriptCapitalD]",
+               ShowAutoStyles->False,
+               AutoSpacing->False],
+              $CellContext`Dim,
+              Editable->False], "2"], "-", 
+            InterpretationBox[
+             StyleBox["\[ScriptS]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Spin,
+             Editable->False]}], "]"}]}], 
+         RowBox[{
+          InterpretationBox[
+           StyleBox["Gamma",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           Gamma,
+           Editable->False], "[", 
+          RowBox[{"4", "-", 
+           FractionBox[
+            InterpretationBox[
+             StyleBox["\[ScriptCapitalD]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Dim,
+             Editable->False], "2"], "+", 
+           InterpretationBox[
+            StyleBox["\[ScriptN]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`NInd,
+            Editable->False], "-", 
+           InterpretationBox[
+            StyleBox["\[ScriptS]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Spin,
+            Editable->False]}], "]"}]]}]},
+      {
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["2", 
+          RowBox[{
+           RowBox[{"-", "1"}], "-", 
+           InterpretationBox[
+            StyleBox["\[ScriptN]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`NInd,
+            Editable->False]}]], " ", 
+         InterpretationBox[
+          StyleBox["\[ScriptN]",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          $CellContext`NInd,
+          Editable->False], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "4"}], "+", 
+           InterpretationBox[
+            StyleBox["\[ScriptCapitalD]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Dim,
+            Editable->False], "+", 
+           InterpretationBox[
+            StyleBox["\[ScriptS]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Spin,
+            Editable->False]}], ")"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "2"}], " ", 
+            InterpretationBox[
+             StyleBox["\[ScriptN]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`NInd,
+             Editable->False], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "3"}], "+", 
+              InterpretationBox[
+               StyleBox["\[ScriptS]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`Spin,
+               Editable->False]}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "4"}], "+", 
+              InterpretationBox[
+               StyleBox["\[ScriptS]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`Spin,
+               Editable->False]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{"3", "+", 
+              InterpretationBox[
+               StyleBox["\[ScriptS]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`Spin,
+               Editable->False]}], ")"}]}], "+", 
+           RowBox[{
+            InterpretationBox[
+             StyleBox["\[ScriptCapitalD]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Dim,
+             Editable->False], " ", 
+            RowBox[{"(", 
+             RowBox[{"2", "-", 
+              RowBox[{"2", " ", 
+               InterpretationBox[
+                StyleBox["\[ScriptN]",
+                 ShowAutoStyles->False,
+                 AutoSpacing->False],
+                $CellContext`NInd,
+                Editable->False]}], "+", 
+              InterpretationBox[
+               StyleBox["\[ScriptS]",
+                ShowAutoStyles->False,
+                AutoSpacing->False],
+               $CellContext`Spin,
+               Editable->False]}], ")"}]}]}], ")"}], " ", 
+         RowBox[{
+          InterpretationBox[
+           StyleBox["Gamma",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           Gamma,
+           Editable->False], "[", 
+          RowBox[{"3", "-", 
+           FractionBox[
+            InterpretationBox[
+             StyleBox["\[ScriptCapitalD]",
+              ShowAutoStyles->False,
+              AutoSpacing->False],
+             $CellContext`Dim,
+             Editable->False], "2"], "-", 
+           InterpretationBox[
+            StyleBox["\[ScriptS]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Spin,
+            Editable->False]}], "]"}]}], 
+        RowBox[{
+         InterpretationBox[
+          StyleBox["Gamma",
+           ShowAutoStyles->False,
+           AutoSpacing->False],
+          Gamma,
+          Editable->False], "[", 
+         RowBox[{"4", "-", 
+          FractionBox[
+           InterpretationBox[
+            StyleBox["\[ScriptCapitalD]",
+             ShowAutoStyles->False,
+             AutoSpacing->False],
+            $CellContext`Dim,
+            Editable->False], "2"], "+", 
+          InterpretationBox[
+           StyleBox["\[ScriptN]",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`NInd,
+           Editable->False], "-", 
+          InterpretationBox[
+           StyleBox["\[ScriptS]",
+            ShowAutoStyles->False,
+            AutoSpacing->False],
+           $CellContext`Spin,
+           Editable->False]}], "]"}]]}
+     },
+     GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    Column], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.9686088613747063`*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"d5982ab9-ec81-47f9-b372-3fd41761d3b8"],
+
+Cell["Grid of discrete ranks.", "Text",
+ CellContext->"Global`",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.9686088613992443`*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"66a74ee6-4eb0-4588-8276-\
+5fa187160a84"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Power", "infy", 
+   "\"Infinite expression \\!\\(\\*FractionBox[\\\"1\\\", \\\"0\\\"]\\) \
+encountered.\"", 2, 1, 1, 30162231333479426926, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9686088619632273`*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"69b32a09-2d3b-4cf7-9c67-13758efa42a0"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Power", "infy", 
+   "\"Infinite expression \\!\\(\\*FractionBox[\\\"1\\\", \\\"0\\\"]\\) \
+encountered.\"", 2, 1, 2, 30162231333479426926, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.968608862078433*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"b245944f-0897-453b-8969-7791c52972ba"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "First", "nofirst", 
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", \\\"}\\\"}]\\) has zero length and no first \
+element.\"", 2, 1, 3, 30162231333479426926, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9686088621120367`*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"ec7e53b1-3eeb-43d7-a97e-fb6cf8624833"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "1", "2", "X", "3", "3", "3", "3"},
+     {"0", "1", "2", "1", "2", "2", "3", "3"},
+     {"0", "1", "2", "2", "3", "3", "3", "3"},
+     {"0", "1", "2", "2", "3", "3", "3", "3"},
+     {"0", "1", "2", "2", "3", "3", "3", "3"},
+     {"0", "1", "2", "2", "3", "3", "3", "3"},
+     {"0", "1", "2", "2", "3", "3", "3", "3"},
+     {"0", "1", "2", "2", "3", "3", "3", "3"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "DisplayFormulaNumbered",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.9686088799831676`*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.0784313725490196, 0.17254901960784313`, 0.20784313725490197`],
+ CellTags->
+  "NoEquationLabel",ExpressionUUID->"02efc0c0-a28e-4af7-a33c-d07e7cd608f7"],
+
+Cell[TextData[{
+ StyleBox["Key observation: ",
+  FontSize->Large],
+ "This is the end of the script."
+}], "Text",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.968608879997897*^9},
+ FontColor->RGBColor[
+  0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+ Background->RGBColor[
+  0.1607843137254902, 0.40784313725490196`, 
+   0.45098039215686275`],ExpressionUUID->"6d5025a6-dc68-4d16-82e6-\
+d7e32a96b281"]
+},
+WindowSize->{717, 721.5},
+WindowMargins->{{-720, Automatic}, {Automatic, 87}},
+WindowElements->{},
+FontColor->RGBColor[
+ 0.7686274509803922, 0.7803921568627451, 0.7803921568627451],
+Background->RGBColor[
+ 0.027450980392156862`, 0.1411764705882353, 0.17254901960784313`],
+FrontEndVersion->"14.2 for Linux x86 (64-bit) (December 26, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0885e7a6-fe93-4367-8d15-efe7a499e6ed"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "NoEquationLabel"->{
+  Cell[6262, 181, 2708, 100, 41, InheritFromParent,ExpressionUUID->"44a3f3ab-2b50-455e-97f1-a63b796e1f11",
+   CellTags->"NoEquationLabel"],
+  Cell[9372, 295, 3041, 102, 71, InheritFromParent,ExpressionUUID->"4a125f17-3b32-452d-8520-773cf0d476e0",
+   CellTags->"NoEquationLabel"],
+  Cell[12416, 399, 778, 25, 41, InheritFromParent,ExpressionUUID->"0f1a1c82-1917-42da-be83-0a49c68161eb",
+   CellTags->"NoEquationLabel"],
+  Cell[13197, 426, 2638, 92, 67, InheritFromParent,ExpressionUUID->"b711e177-7891-4dfb-bbab-cc719cc92eef",
+   CellTags->"NoEquationLabel"],
+  Cell[16329, 535, 780, 25, 41, InheritFromParent,ExpressionUUID->"9ef975d7-9802-426e-80e9-9b1306260fb6",
+   CellTags->"NoEquationLabel"],
+  Cell[17511, 574, 1819, 63, 67, InheritFromParent,ExpressionUUID->"b8563b6f-a48c-4f1f-a25d-4b109a0cd4ba",
+   CellTags->"NoEquationLabel"],
+  Cell[19333, 639, 2003, 69, 67, InheritFromParent,ExpressionUUID->"2cb589d9-8d2f-4214-a492-36fd7eb542e2",
+   CellTags->"NoEquationLabel"],
+  Cell[22363, 739, 758, 24, 41, InheritFromParent,ExpressionUUID->"9a40c2c4-7f2c-42aa-ae8c-ba202630d96b",
+   CellTags->"NoEquationLabel"],
+  Cell[23124, 765, 955, 32, 41, InheritFromParent,ExpressionUUID->"fb05f8c3-df00-43e3-8da2-791219c85db2",
+   CellTags->"NoEquationLabel"],
+  Cell[24082, 799, 953, 32, 41, InheritFromParent,ExpressionUUID->"759b38a2-6a5e-409e-ac76-b1857368844c",
+   CellTags->"NoEquationLabel"],
+  Cell[25038, 833, 757, 24, 41, InheritFromParent,ExpressionUUID->"cbb9e76e-cda9-48a0-83a8-ba9fc0dbf2f9",
+   CellTags->"NoEquationLabel"],
+  Cell[25798, 859, 1086, 36, 54, InheritFromParent,ExpressionUUID->"b3d8fea5-debe-4854-b70b-296d685db9b7",
+   CellTags->"NoEquationLabel"],
+  Cell[26887, 897, 956, 32, 41, InheritFromParent,ExpressionUUID->"d3a912f9-7b28-4606-9199-8e81bd4025a0",
+   CellTags->"NoEquationLabel"],
+  Cell[28263, 943, 3657, 133, 55, InheritFromParent,ExpressionUUID->"729319a7-9b3a-42e9-af40-1cbdb0fcadff",
+   CellTags->"NoEquationLabel"],
+  Cell[32396, 1093, 2279, 77, 71, InheritFromParent,ExpressionUUID->"5c7b86dc-e359-4fb3-9f08-72d3fc5e5f8a",
+   CellTags->"NoEquationLabel"],
+  Cell[34678, 1172, 1445, 50, 59, InheritFromParent,ExpressionUUID->"30960505-f22f-4053-b267-47d689050b72",
+   CellTags->"NoEquationLabel"],
+  Cell[36126, 1224, 587, 17, 41, InheritFromParent,ExpressionUUID->"07e1b8f6-a075-4c3a-8667-0645ade8bb90",
+   CellTags->"NoEquationLabel"],
+  Cell[37205, 1258, 585, 17, 41, InheritFromParent,ExpressionUUID->"74b74309-18d3-457b-8457-9bade0b21a0a",
+   CellTags->"NoEquationLabel"],
+  Cell[38192, 1289, 1320, 45, 71, InheritFromParent,ExpressionUUID->"0b649df8-d24a-45f8-b626-83f6b80e884c",
+   CellTags->"NoEquationLabel"],
+  Cell[39515, 1336, 1351, 46, 55, InheritFromParent,ExpressionUUID->"ad2078e1-2294-4e40-8f98-e3d2a1716a44",
+   CellTags->"NoEquationLabel"],
+  Cell[41286, 1397, 20950, 639, 257, InheritFromParent,ExpressionUUID->"d5982ab9-ec81-47f9-b372-3fd41761d3b8",
+   CellTags->"NoEquationLabel"],
+  Cell[63792, 2086, 1195, 30, 168, InheritFromParent,ExpressionUUID->"02efc0c0-a28e-4af7-a33c-d07e7cd608f7",
+   CellTags->"NoEquationLabel"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"NoEquationLabel", 65979, 2149}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 242, 5, 23, "Print",ExpressionUUID->"4eb8c06d-f824-4ff9-874f-5aa14fe0e774"],
+Cell[821, 29, 510, 12, 24, "Print",ExpressionUUID->"2963bba1-a494-45e9-b395-7c5a48f1079b"],
+Cell[1334, 43, 263, 5, 23, "Print",ExpressionUUID->"41fdaaaa-8943-4af8-a496-c93d7d794873"],
+Cell[1600, 50, 222, 4, 23, "Print",ExpressionUUID->"b164a52b-0d64-43b9-a88f-f523b28d5f03"],
+Cell[1825, 56, 205, 4, 23, "Print",ExpressionUUID->"d30ecedd-0b13-4525-9998-71631f045f88"],
+Cell[2033, 62, 242, 5, 23, "Print",ExpressionUUID->"794d2b5d-0f5d-4fd0-b1bf-9140e2d9688f"],
+Cell[2278, 69, 516, 12, 24, "Print",ExpressionUUID->"f618fecb-50a6-4ad1-bdc7-c6a55bc03689"],
+Cell[2797, 83, 263, 5, 23, "Print",ExpressionUUID->"35c2044f-d8c4-486c-a870-54704cd61ced"],
+Cell[3063, 90, 242, 5, 23, "Print",ExpressionUUID->"89df2a7a-331f-4028-8a83-6d882d24a2b6"],
+Cell[3308, 97, 534, 13, 24, "Print",ExpressionUUID->"a0246d1f-ffcf-4ed6-aa77-7871e61f0721"],
+Cell[3845, 112, 276, 5, 23, "Print",ExpressionUUID->"ae2f20fd-97c6-4bc3-9181-d97f6bf86d74"],
+Cell[4124, 119, 242, 5, 23, "Print",ExpressionUUID->"4c654135-3ad1-4a9f-a2a7-51bce397fc2e"],
+Cell[4369, 126, 397, 7, 60, "Print",ExpressionUUID->"85091c1f-fd65-4e76-948e-8a48e6e52738"],
+Cell[4769, 135, 242, 5, 23, "Print",ExpressionUUID->"53654200-3d8f-482d-95bd-8a32f54f2e86"]
+}, Open  ]],
+Cell[5026, 143, 411, 11, 131, InheritFromParent,ExpressionUUID->"a55d051a-1c5a-40bc-a19f-35066b778105"],
+Cell[5440, 156, 422, 11, 75, InheritFromParent,ExpressionUUID->"1e86ac4f-434d-4a8b-a324-53a8fcdb9e5f"],
+Cell[5865, 169, 394, 10, 49, "Text",ExpressionUUID->"c36522e9-2924-43aa-95db-2fabc92ab545"],
+Cell[6262, 181, 2708, 100, 41, InheritFromParent,ExpressionUUID->"44a3f3ab-2b50-455e-97f1-a63b796e1f11",
+ CellTags->"NoEquationLabel"],
+Cell[8973, 283, 396, 10, 49, "Text",ExpressionUUID->"20e764cf-6c81-4d21-92d6-a3c21706527c"],
+Cell[9372, 295, 3041, 102, 71, InheritFromParent,ExpressionUUID->"4a125f17-3b32-452d-8520-773cf0d476e0",
+ CellTags->"NoEquationLabel"],
+Cell[12416, 399, 778, 25, 41, InheritFromParent,ExpressionUUID->"0f1a1c82-1917-42da-be83-0a49c68161eb",
+ CellTags->"NoEquationLabel"],
+Cell[13197, 426, 2638, 92, 67, InheritFromParent,ExpressionUUID->"b711e177-7891-4dfb-bbab-cc719cc92eef",
+ CellTags->"NoEquationLabel"],
+Cell[15838, 520, 488, 13, 71, "Text",ExpressionUUID->"6b437c72-5cdd-4917-8a66-59a25f99cfff"],
+Cell[16329, 535, 780, 25, 41, InheritFromParent,ExpressionUUID->"9ef975d7-9802-426e-80e9-9b1306260fb6",
+ CellTags->"NoEquationLabel"],
+Cell[17112, 562, 396, 10, 49, "Text",ExpressionUUID->"4af82153-606c-4f8c-9b1a-cb964d73a391"],
+Cell[17511, 574, 1819, 63, 67, InheritFromParent,ExpressionUUID->"b8563b6f-a48c-4f1f-a25d-4b109a0cd4ba",
+ CellTags->"NoEquationLabel"],
+Cell[19333, 639, 2003, 69, 67, InheritFromParent,ExpressionUUID->"2cb589d9-8d2f-4214-a492-36fd7eb542e2",
+ CellTags->"NoEquationLabel"],
+Cell[21339, 710, 426, 11, 75, InheritFromParent,ExpressionUUID->"54625805-0a00-41b6-b6e6-c91fb2cf059c"],
+Cell[21768, 723, 592, 14, 93, "Text",ExpressionUUID->"c7d54064-1996-441a-9f2d-f29969dc64e5"],
+Cell[22363, 739, 758, 24, 41, InheritFromParent,ExpressionUUID->"9a40c2c4-7f2c-42aa-ae8c-ba202630d96b",
+ CellTags->"NoEquationLabel"],
+Cell[23124, 765, 955, 32, 41, InheritFromParent,ExpressionUUID->"fb05f8c3-df00-43e3-8da2-791219c85db2",
+ CellTags->"NoEquationLabel"],
+Cell[24082, 799, 953, 32, 41, InheritFromParent,ExpressionUUID->"759b38a2-6a5e-409e-ac76-b1857368844c",
+ CellTags->"NoEquationLabel"],
+Cell[25038, 833, 757, 24, 41, InheritFromParent,ExpressionUUID->"cbb9e76e-cda9-48a0-83a8-ba9fc0dbf2f9",
+ CellTags->"NoEquationLabel"],
+Cell[25798, 859, 1086, 36, 54, InheritFromParent,ExpressionUUID->"b3d8fea5-debe-4854-b70b-296d685db9b7",
+ CellTags->"NoEquationLabel"],
+Cell[26887, 897, 956, 32, 41, InheritFromParent,ExpressionUUID->"d3a912f9-7b28-4606-9199-8e81bd4025a0",
+ CellTags->"NoEquationLabel"],
+Cell[27846, 931, 414, 10, 49, "Text",ExpressionUUID->"86ecc28c-727f-4a4e-a5b0-580a56024b3b"],
+Cell[28263, 943, 3657, 133, 55, InheritFromParent,ExpressionUUID->"729319a7-9b3a-42e9-af40-1cbdb0fcadff",
+ CellTags->"NoEquationLabel"],
+Cell[31923, 1078, 470, 13, 49, "Text",ExpressionUUID->"9520055a-38c4-4d12-ad5e-e76ac57ca9cc"],
+Cell[32396, 1093, 2279, 77, 71, InheritFromParent,ExpressionUUID->"5c7b86dc-e359-4fb3-9f08-72d3fc5e5f8a",
+ CellTags->"NoEquationLabel"],
+Cell[34678, 1172, 1445, 50, 59, InheritFromParent,ExpressionUUID->"30960505-f22f-4053-b267-47d689050b72",
+ CellTags->"NoEquationLabel"],
+Cell[36126, 1224, 587, 17, 41, InheritFromParent,ExpressionUUID->"07e1b8f6-a075-4c3a-8667-0645ade8bb90",
+ CellTags->"NoEquationLabel"],
+Cell[36716, 1243, 486, 13, 71, "Text",ExpressionUUID->"43fa7391-7049-425d-938d-5ccd68aa2566"],
+Cell[37205, 1258, 585, 17, 41, InheritFromParent,ExpressionUUID->"74b74309-18d3-457b-8457-9bade0b21a0a",
+ CellTags->"NoEquationLabel"],
+Cell[37793, 1277, 396, 10, 49, "Text",ExpressionUUID->"bb154ef3-cc7b-49ea-a844-21c6e5857ae0"],
+Cell[38192, 1289, 1320, 45, 71, InheritFromParent,ExpressionUUID->"0b649df8-d24a-45f8-b626-83f6b80e884c",
+ CellTags->"NoEquationLabel"],
+Cell[39515, 1336, 1351, 46, 55, InheritFromParent,ExpressionUUID->"ad2078e1-2294-4e40-8f98-e3d2a1716a44",
+ CellTags->"NoEquationLabel"],
+Cell[40869, 1384, 414, 11, 75, InheritFromParent,ExpressionUUID->"5517fb69-9f5c-4b78-9f19-b626f6ea5d15"],
+Cell[41286, 1397, 20950, 639, 257, InheritFromParent,ExpressionUUID->"d5982ab9-ec81-47f9-b372-3fd41761d3b8",
+ CellTags->"NoEquationLabel"],
+Cell[62239, 2038, 392, 10, 49, "Text",ExpressionUUID->"66a74ee6-4eb0-4588-8276-5fa187160a84"],
+Cell[62634, 2050, 382, 10, 37, "Message",ExpressionUUID->"69b32a09-2d3b-4cf7-9c67-13758efa42a0"],
+Cell[63019, 2062, 380, 10, 37, "Message",ExpressionUUID->"b245944f-0897-453b-8969-7791c52972ba"],
+Cell[63402, 2074, 387, 10, 26, "Message",ExpressionUUID->"ec7e53b1-3eeb-43d7-a97e-fb6cf8624833"],
+Cell[63792, 2086, 1195, 30, 168, InheritFromParent,ExpressionUUID->"02efc0c0-a28e-4af7-a33c-d07e7cd608f7",
+ CellTags->"NoEquationLabel"],
+Cell[64990, 2118, 438, 13, 61, "Text",ExpressionUUID->"6d5025a6-dc68-4d16-82e6-d7e32a96b281"]
+}
+]
+*)
+

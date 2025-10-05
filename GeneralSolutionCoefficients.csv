@@ -1,0 +1,6 @@
+"(-2*NInd + Spin)/(2^NInd*Pochhammer[3 - Dim/2 - Spin, NInd])"
+"(2^(-1 - NInd)*(-2*NInd + Spin)*(2 + 2*NInd*(-3 + Dim + Spin) - Spin*(-3 + Dim + Spin))*Gamma[3 - Dim/2 - Spin])/Gamma[4 - Dim/2 + NInd - Spin]"
+"-((2^(-1 - NInd)*(2*NInd - Spin)*(1 + 2*NInd - Spin)*(-4 + Dim + Spin)*Gamma[3 - Dim/2 - Spin])/Gamma[4 - Dim/2 + NInd - Spin])"
+"-((2^(1 - NInd)*NInd*(-4 + Dim + Spin)*Gamma[3 - Dim/2 - Spin])/Gamma[3 - Dim/2 + NInd - Spin])"
+"-((NInd*(2*NInd - Spin)*(-5 + Dim + Spin)*(-4 + Dim + Spin)*Gamma[3 - Dim/2 - Spin])/(2^NInd*Gamma[4 - Dim/2 + NInd - Spin]))"
+"(2^(-1 - NInd)*NInd*(-4 + Dim + Spin)*(-2*NInd*(-3 + Spin) + (-4 + Spin)*(3 + Spin) + Dim*(2 - 2*NInd + Spin))*Gamma[3 - Dim/2 - Spin])/Gamma[4 - Dim/2 + NInd - Spin]"
