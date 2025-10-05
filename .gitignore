@@ -1,0 +1,5 @@
+# Large uncompressed GIF - use compression script to create GeneralSolution.gif
+GeneralSolutionTransform.gif
+
+# Compression script contains hardcoded SSH configuration
+compress_gif.sh
