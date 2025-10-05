@@ -39,7 +39,6 @@ The supplemental materials include:
 
 - **`GeneralSolution.pdf`** - Rendered output from Mathematica notebook showing symbolic derivations
 - **`Dariograph.pdf`** - Heatmap visualization of singular value spectra showing failure of scalar reduction
-- **`GeneralSolutionTransform.gif`** - Animated visualization of the continuous analytic extension in spin and dimension
 
 ## Requirements
 
